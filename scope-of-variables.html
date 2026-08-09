@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Scope of Variables</title>
+    </head>
+
+    <body>
+        <button onclick="myfunction()">Click Me !!</button>
+
+        <p id="demo"></p>
+        <p id="demo1"></p>
+
+        <script>
+            var y = 7;
+            function myfunction() {
+                var x = 19;
+                document.getElementById("demo").innerHTML = x + y;
+            }
+
+                document.getElementById("demo").innerHTML = x;
+                document.getElementById("demo1").innerHTML = y;
+                
+        </script>
+    </body>
+</html>
