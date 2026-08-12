@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+    <h1>CALCULATOR : </h1>
+    <h3>Sum Of Two Numbers</h3>
+    <p id="sum"></p>
+
+    <h3>Subtraction Of Two Numbers</h3>
+    <p id="sub"></p>
+
+    <h3>Product Of Two Numbers</h3>
+    <p id="product"></p>
+
+    <h3>Division Of Two Numbers</h3>
+    <p id="div"></p>
+
+    <script>
+        var num1 = 9;
+        var num2 = 6;
+
+        var sum = num1 + num2;
+        document.getElementById("sum").innerHTML = "The sum of given numbers is: " + sum;
+
+        var sub = num1 - num2;
+        document.getElementById("sub").innerHTML = "The difference of given numbers is: " + sub;
+
+        var product = num1 * num2;
+        document.getElementById("product").innerHTML = "The product of given numbers is: " + product;
+
+        var div = num1 / num2;
+        document.getElementById("div").innerHTML = "The quotient of given numbers is: " + div;
+    </script>
+</html>
