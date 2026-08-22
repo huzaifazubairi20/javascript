@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PRACTICE</title>
+    </head>
+
+    <body>
+        <h3>LOOPS :</h3>
+        <div id="demo"></div>
+        <br>
+        <br>
+        <h3>SWITCHES :</h3>
+        <div id="demo1"></div>
+
+        <script>
+            {var numb = ["1", "22", "333", "4444", "55555", "666666", "7777777", "88888888", "999999999"];
+            var text = "";
+            var i; 
+            
+            for (i = 0; i < numb.length; i++) {
+                text += numb[i] + "<br>";
+            }}
+            document.getElementById("demo").innerHTML = text; 
+        </script>
+        
+        
+
+        <script>
+            var day;
+            switch (new Date().getDay()) {
+                case 0:
+                    day = "Sunday";
+                    break;
+
+                case 1:
+                    day = "Monday";
+                    break;
+
+                case 2:
+                    day = "Tuesday";
+                    break;
+
+                case 3:
+                    day = "Wednesday";
+                    break;
+
+                case 4:
+                    day = "Thursday";
+                    break;
+
+                case 5:
+                    day = "Friday";
+                    break;
+
+                case 6:
+                    day = "Saturday";
+                    break;
+            }
+        
+            document.getElementById("demo1").innerHTML = "Today is " + day;
+        </script>
+    </body>
+</html>
