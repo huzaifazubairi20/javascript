@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>ABOUT ME</title>
+    </head>
+    <body>
+        <h2>About Me :</h2>
+        <p>Hello, my name is <b><span id="name"></span></b></p>
+        <p>I study in class <b><span id="class"></span></b></p>
+        <p>My hobby is to play <b><span id="sport"></span></b></p>
+        <p>You can contact me at <b><span id="mail"></span></b></p>
+
+        <script>
+            var myProfile ={
+                name: "Huzaifa Zubairi",
+                class: "11",
+                sport: "Cricket",
+                mail: "huzaifazubairi@example.com"
+            }
+
+            var nameE1 = document.getElementById("name");
+            var classE1 = document.getElementById("class");
+            var sportE1 = document.getElementById("sport");
+            var mailE1 = document.getElementById("mail");
+
+            nameE1.textContent = myProfile.name;
+            classE1.textContent = myProfile.class;
+            sportE1.textContent = myProfile.sport;
+            mailE1.textContent = myProfile.mail;
+        </script>
+    </body>
+</html>
