@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>CARS</title>
+    </head>
+    <body>
+        <h1>CARS</h1>
+        <h2>My favorite cars are mentioned below :</h2>
+        <u>
+        <ol>
+            <li id="car1"></li>
+            <li id="car2"></li>
+            <li id="car3"></li>
+            <li id="car4"></li>
+        </ol>
+        </u>
+
+        <br>
+
+        <div id="demo"></div>
+
+        <script>
+
+            var myCars = {
+                car1: "BMW",
+                car2: "Mercedes",
+                car3: "Audi",
+                car4: "Lamborghini",
+            };
+
+            var car1E1 = document.getElementById("car1");
+            var car2E1 = document.getElementById("car2");
+            var car3E1 = document.getElementById("car3");
+            var car4E1 = document.getElementById("car4");
+
+            car1E1.textContent = myCars.car1;
+            car2E1.textContent = myCars.car2;
+            car3E1.textContent = myCars.car3;
+            car4E1.textContent = myCars.car4;
+
+            var cars = ["BMW", "Mercedes", "Audi", "Lamborghini"];  
+            var demo = cars.join("  |  ");
+            document.getElementById("demo").innerHTML = demo;
+
+
+        </script>
+    </body>
+</html>
