@@ -17,13 +17,15 @@
         <br>
 
         <div id="demo"></div>
+        <p>From the above list, my most favorite car is <b><span id="favorite1"></span></b></p>
+        <p>From the above list, my least favorite car is <b><span id="least1"></span></b></p>
 
         <script>
 
             var myCars = {
-                car1: "BMW",
-                car2: "Mercedes",
-                car3: "Audi",
+                car1: "Audi",
+                car2: "BMW",
+                car3: "Mercedes",
                 car4: "Lamborghini",
             };
 
@@ -37,9 +39,17 @@
             car3E1.textContent = myCars.car3;
             car4E1.textContent = myCars.car4;
 
-            var cars = ["BMW", "Mercedes", "Audi", "Lamborghini"];  
+            var cars = ["Audi", "BMW", "Mercedes", "Lamborghini"];  
             var demo = cars.join("  |  ");
             document.getElementById("demo").innerHTML = demo;
+
+            var favorite1 = cars[0];
+            document.getElementById("favorite1").innerHTML = favorite1;
+
+            var least1 = cars[cars.length - 1];
+            document.getElementById("least1").innerHTML = least1;
+
+
 
 
         </script>
