@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>My Game Profile</title>
+
+<style>
+
+body {
+
+font-family: Arial, sans-serif;
+
+background: aliceblue;
+
+text-align: center;
+
+padding: 30px;
+
+}
+
+h1 { color: navy; }
+
+button {
+
+background: navy;
+
+color: white;
+
+padding: 10px 25px;
+
+border: none;
+
+border-radius: 20px;
+
+cursor: pointer;
+
+}
+
+div {
+
+border: 1px solid navy;
+
+width: 280px;
+
+margin: 6px auto;
+
+padding: 8px 12px;
+
+text-align: left;
+
+border-radius: 6px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+    <h1>My Game Profile</h1>
+    <div>NAME : <span id="name"></span></div>
+    <div>RANK : <span id="rank"></span></div>
+    <div>SCORE : <span id="score"></span></div>
+    <div>TOP SCORE : <span id="topscore"></span></div>
+    <div>STARS : <span id="stars"></span></div>
+    <div>GREETING : <span id="greeting"></span></div>
+
+    <button onclick = "showProfile()"> Show Profile !! </button>
+
+    <script>
+        function showProfile() {
+            let name = "Steve";
+            let myScore = 82;
+            let fullScore = 100;
+
+            let topscore = myScore == fullScore;
+
+            let rank;
+            if (myScore >= 80) {
+                rank = "Elite";
+            } else if (myScore >= 60) {
+                rank = "Platinum";
+            } else {
+                rank = "Bronze";
+            }
+
+            let stars = "";
+            let count = 0;
+            while (count < 5) {
+                stars = stars + "⭐";
+                count = count + 1;
+            }
+
+            let hour = newDate().getHours();
+            let greeting;
+            if (hour < 12) {
+                greeting = "Good Morning!";
+            } 
+            else if (hour < 17) {
+                greeting = "Good Afternoon!";
+            } 
+            else {
+                greeting = "Good Evening!";
+            }
+
+            
+            document.getElementById("name").innerHTML = name;
+            document.getElementById("rank").innerHTML = rank;
+            document.getElementById("score").innerHTML = myScore;
+            document.getElementById("topscore").innerHTML = topscore;
+            document.getElementById("stars").innerHTML = stars;
+            document.getElementById("greeting").innerHTML = greeting;
+        }
+            
+    </script>
+
+    </body>
+    </html>
