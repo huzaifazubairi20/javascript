@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>My Zoo</title>
+
+<style>
+
+body {
+
+font-family: Arial, sans-serif;
+
+background: seagreen;
+
+text-align: center;
+
+padding: 32px;
+
+}
+
+h1 {
+
+color: #ecf015;
+
+}
+
+#zoo {
+
+border: 2px solid #fa0cbe;
+
+width: 300px;
+
+margin: 16px auto;
+
+padding: 12px;
+
+border-radius: 10px;
+
+background: rgb(207, 132, 132);
+
+}
+
+.zone {
+
+border: 1px solid #2a07a8;
+
+margin: 6px 0;
+
+padding: 8px 12px;
+
+border-radius: 6px;
+
+text-align: left;
+
+}
+
+button {
+
+background: #6b046e;
+
+color: rgb(24, 213, 247);
+
+padding: 10px 24px;
+
+border: none;
+
+border-radius: 20px;
+
+cursor: pointer;
+
+}
+
+</style>
+
+</head>
+
+<body>
+    <h1>My Zoo</h1>
+    <div id="zoo">
+        <div class="zone">Zone 1 : <b><span id="zone1"></span></b></div>
+        <div class="zone">Zone 2 : <b><span id="zone2"></span></b></div>
+        <div class="zone">Zone 3 : <b><span id="zone3"></span></b></div>
+        <div class="zone">Total Animals In Zoo : <b><span id="total"></span></b></div>
+    </div>
+
+    <br>
+
+    <button onclick="openZoo()">Open The Zoo</button>
+
+    <script>
+        function openZoo() {
+            document.getElementById("zone1").innerHTML = "LION";
+            document.getElementById("zone2").innerHTML = "BEAR";
+            document.getElementById("zone3").innerHTML = "ELEPHANT";
+            document.getElementById("total").innerHTML = "3 ";
+        }
+    </script>
