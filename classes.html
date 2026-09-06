@@ -88,9 +88,9 @@ margin-top: 10px;
 
 <body>
     <h1> My Planet Card</h1>
-    <p class="card1"></p>
-    <p class="card2"></p>
-    <p class="card3"></p>
+    <p id="card1"></p>
+    <p id="card2"></p>
+    <p id="card3"></p>
 
     <button onclick="showPlanets()">Show Planets</button>
 
@@ -111,9 +111,9 @@ margin-top: 10px;
             let p2 = new Planet("Mars", "Known as the Red Planet.");
             let p3 = new Planet("Jupiter", "The largest planet in our solar system.");
 
-            document.getElementbyId("card1").innerHTML = p1.describe();
-            document.getElementbyId("card2").innerHTML = p2.describe();
-            document.getElementbyId("card3").innerHTML = p3.describe();
+            document.getElementById("card1").innerHTML = p1.describe();
+            document.getElementById("card2").innerHTML = p2.describe();
+            document.getElementById("card3").innerHTML = p3.describe();
         }
     </script>
 </body>
