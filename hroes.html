@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>My Super Hero Cards</title>
+
+<style>
+
+body {
+
+font-family: Arial;
+
+background: #f0f4ff;
+
+padding: 30px;
+
+text-align: center;
+
+}
+
+h1 { color: #3f14ff; }
+
+p { color: #555; }
+
+.cards {
+
+display: flex;
+
+justify-content: center;
+
+gap: 20px;
+
+margin-top: 25px;
+
+}
+
+.card {
+
+background: rgb(84, 255, 241);
+
+border: 3px solid #210e8f;
+
+border-radius: 12px;
+
+padding: 20px;
+
+width: 200px;
+
+}
+
+.hero-name {
+
+font-size: 22px;
+
+font-weight: bold;
+
+color: #333;
+
+}
+
+.hero-power { color: #666; margin-top: 10px; font-size: 14px; }
+
+button {
+
+background: #364485;
+
+color: rgb(14, 13, 13);
+
+border: none;
+
+padding: 12px 28px;
+
+border-radius: 8px;
+
+cursor: pointer;
+
+font-size: 16px;
+
+font-style: bold;
+
+margin-top: 10px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+    <h1>My Super Hero Cards</h1>
+
+    <button onclick="showHeroes()">Show Heroes</button>
+
+    <div id="cards" class="cards">
+        <div class="card">
+            <p class="hero-name" id="card1"></p>
+            <p class="hero-power" id="power1"></p>
+        </div>
+        <div class="card">
+            <p class="hero-name" id="card2"></p>
+            <p class="hero-power" id="power2"></p>
+        </div>
+        <div class="card">
+            <p class="hero-name" id="card3"></p>
+            <p class="hero-power" id="power3"></p>
+        </div   >
+    </div>
+    
+
+    <script>
+        class Hero {
+            constructor(name, power) {
+                this.name = name;
+                this.power = power;
+            }
+
+            describe() {
+                return this.name + " : " + this.power;
+            }
+        }
+
+        function showHeroes() {
+            let h1 = new Hero("Superman", "Super strength and flight.");
+            let h2 = new Hero("Spider-Man", "Spider powers and web-slinging.");
+            let h3 = new Hero("Dr. Strange", "Master of the mystic arts and magic.");
+
+            document.getElementById("card1").innerHTML = h1.describe();
+            document.getElementById("card2").innerHTML = h2.describe();
+            document.getElementById("card3").innerHTML = h3.describe();
+        }
+    </script>
+</body>
+</html>
