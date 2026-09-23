@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>School Event Data Viewer</title>
+
+<style>
+
+body {
+
+font-family: Arial, sans-serif;
+
+background: aliceblue;
+
+text-align: center;
+
+padding: 30px;
+
+}
+
+h1 { color: #ff5a43; }
+
+button {
+
+background: #ff5a43;
+
+color: white;
+
+padding: 10px 25px;
+
+border: none;
+
+border-radius: 20px;
+
+cursor: pointer;
+
+margin: 5px;
+
+}
+
+div {
+
+border: 1px solid #ff5a43;
+
+width: 280px;
+
+margin: 6px auto;
+
+padding: 8px 12px;
+
+text-align: left;
+
+border-radius: 6px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>School Event Data Viewer</h1>
+
+<button onclick="saveOrder()">Save Event</button>
+
+<button onclick="startDelivery()">Start Event</button>
+
+<div>JSON Data: <span id="json-text"></span></div>
+
+<div>Event Name: <span id="loaded-item"></span></div>
+
+<div>Event Fee: <span id="loaded-price"></span></div>
+
+<div>Status: <span id="status"></span></div>
+
+<div>Result: <span id="result"></span></div>
+
+<script>
+
+    let order = {
+        item : "Annual Sports Day",
+        price : 0,
+        shop : "ABC School",
+    }
+
+    function saveOrder() {
+        let jsonText = JSON.stringify(order);
+        let loadedOrder = JSON.parse(jsonText);
+
+        document.getElementById("json-text").innerHTML = jsonText;
+        document.getElementById("loaded-item").innerHTML = loadedOrder.item;
+        document.getElementById("loaded-price").innerHTML = loadedOrder.price;
+    }
+
+    function delay(ms) {
+        return new Promise(function(resolve) {
+            setTimeout(resolve, ms);
+        });
+    }
+
+    async function startDelivery() {
+        document.getElementById("result").innerHTML = "";
+
+        document.getElementById("status").innerHTML = "Event Registration Started !!";
+
+        setTimeout(function() {
+        document.getElementById("status").innerHTML = "Event Is Being Prepared !!";
+        }, 2000);
+
+        await delay(3000);
+        document.getElementById("status").innerHTML = "Event Is Starting Soon !!";
+
+        await delay(4000);
+        document.getElementById("result").innerHTML = "School Event Has Started Successfully";
+    }
+    </script>
+
+</body>
+</html>
