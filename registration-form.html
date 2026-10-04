@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<style>
+
+body {
+
+font-family: Arial, sans-serif;
+
+background: aliceblue;
+
+text-align: center;
+
+padding: 30px;
+
+}
+
+h1 {
+
+color: navy;
+
+}
+
+input {
+
+padding: 8px;
+
+margin: 5px;
+
+border: 2px solid navy;
+
+border-radius: 6px;
+
+width: 250px;
+
+}
+
+button {
+
+background: navy;
+
+color: white;
+
+padding: 10px 25px;
+
+border: none;
+
+border-radius: 20px;
+
+cursor: pointer;
+
+}
+
+#timer {
+
+color: grey;
+
+}
+
+</style>
+<title>Registration Form</title>
+</head>
+
+<body>
+    <h1>Registration Form</h1>
+    <p>Enter your name and your obtained marks to get selected!</p>
+
+    <input type="text" id="name" placeholder="Enter Your Name" required>
+    <p id="msg-name"></p>
+
+    <input type="number" id="grade" placeholder="Enter Your Grade" min="2" max="8" required>
+    <p id="msg-grade"></p>
+
+    <input type="number" id="marks" placeholder="Enter Your Marks" min="0" max="100" required>
+    <p id="msg-marks"></p>
+
+    <button onclick="checkForm()">Register</button>
+    <p id="result"></p>
+
+    <script>
+            function checkForm() {
+            var name = document.getElementById("name").value;
+            var grade = document.getElementById("grade").value;
+            var marks = document.getElementById("marks").value;
+
+            var ok = true;
+
+            if (name == "") {
+                document.getElementById("msg-name").innerHTML = "Please enter your name.";
+                document.getElementById("msg-name").style.color = "red";
+                ok = false;
+            } else {
+                document.getElementById("msg-name").innerHTML = "Name Saved !!";
+                document.getElementById("msg-name").style.color = "green";  
+            }
+
+
+            if (grade == "") {
+                document.getElementById("msg-grade").innerHTML = "Please enter your grade.";
+                document.getElementById("msg-grade").style.color = "red";
+                ok = false;
+            } else {
+                document.getElementById("msg-grade").innerHTML = "Grade Saved !!";
+                document.getElementById("msg-grade").style.color = "green";  
+            }
+
+            if (marks == "") {
+                document.getElementById("msg-marks").innerHTML = "Please enter your marks.";
+                document.getElementById("msg-marks").style.color = "red";
+                ok = false;
+            } else {
+                document.getElementById("msg-marks").innerHTML = "Marks Saved !!";
+                document.getElementById("msg-marks").style.color = "green";  
+            }
+
+            if (ok == true) {
+                if (marks >= 75) {
+                    document.getElementById("result").innerHTML = "Congratulations " + name + " ! You are selected !! The Required Marks Were 75 & You Got " + marks + "."
+                    document.getElementById("result").style.color = "green";
+                } else {
+                    document.getElementById("result").innerHTML = "Sorry " + name + "! You marks are below the required marks. The Required Marks Were 75 & You Got " + marks + "."
+                    document.getElementById("result").style.color = "orange";
+                }
+            }
+        }
+        
+    </script>
+
